@@ -26,3 +26,20 @@ Route::resource('anggota', AnggotaController::class);
 Route::resource('petugas', PetugasController::class);
 
 Route::resource('buku', BukuController::class);
+
+/*Route::get('/about', function () {
+    return view('layouts.master');
+});
+
+Route::get('/content', function () {
+    return view('layouts.content.index');
+});
+
+Route::get('/create', function () {
+    return view('layouts.content.create');
+});*/
+
+
+Route::get('/tabel', function () {
+    return view('layouts.tabel.tabel');
+});
