@@ -18,7 +18,7 @@ use App\Http\Controllers\BukuController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.perpustakaan.start');
 });
 
 Route::resource('anggota', AnggotaController::class);
