@@ -8,19 +8,16 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-                <form>
+                <form action="{{ route('petugas.store') }}" method="POST">
+                @csrf 
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="idPetugas">ID Petugas :</label>
-                            <input type="text" class="form-control" id="idPetugas" placeholder="Masukkan ID">
-                        </div>
-                        <div class="form-group">
                             <label for="namaPetugas">Nama Petugas :</label>
-                            <input type="text" class="form-control" id="namaPetugas" placeholder="Masukkan Nama">
+                            <input type="text" class="form-control" name="nama_petugas" id="namaPetugas" placeholder="Masukkan Nama">
                         </div>
                         <div class="form-group">
                             <label>Jabatan Petugas :</label>
-                            <select class="custom-select">
+                            <select class="custom-select" name="jabatan_petugas">
                             <option value="">Pilih Jabatan</option>
                             <option value="kepala-perpus">Kepala Perpustakaan</option>
                             <option value="asisten-kepala-perpus">Asisten Kepala Perpustakaan</option>
@@ -30,11 +27,11 @@
                         </div>
                         <div class="form-group">
                             <label for="noTelp">No. Telepon Petugas :</label>
-                            <input type="text" class="form-control" id="noTelp" placeholder="Masukkan No. Telepon">
+                            <input type="text" class="form-control" name="no_telp_petugas" id="noTelp" placeholder="Masukkan No. Telepon">
                         </div>
                         <div class="form-group">
                             <label>Alamat Petugas :</label>
-                            <textarea class="form-control" rows="3" placeholder="Masukkan Alamat"></textarea>
+                            <textarea class="form-control" name="alamat_petugas" id="alamatPetugas" rows="3" placeholder="Masukkan Alamat"></textarea>
                         </div>  
                     </div>
                     <!-- /.card-body -->

@@ -18,7 +18,7 @@ use App\Http\Controllers\BukuController;
 */
 
 Route::get('/', function () {
-    return view('layouts.perpustakaan.start');
+    return view('perpustakaan.start');
 });
 
 Route::resource('anggota', AnggotaController::class);
@@ -40,6 +40,3 @@ Route::get('/create', function () {
 });*/
 
 
-Route::get('/tabel', function () {
-    return view('layouts.tabel.tabel');
-});

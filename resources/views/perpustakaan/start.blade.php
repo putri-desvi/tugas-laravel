@@ -9,7 +9,7 @@
                 <h6 class="card-title">Silahkan isi Form Anggota ini</h6>
 
                 <p class="card-text">Isi dengan data asli Anda.</p>
-                <a href="/anggota" class="btn btn-primary">Form Anggota</a>
+                <a href="/anggota/create" class="btn btn-primary">Form Anggota</a>
               </div>
             </div>
 
@@ -21,7 +21,7 @@
                 <h6 class="card-title">Silahkan isi Form Buku ini</h6>
 
                 <p class="card-text">Isi dengan data buku asli.</p>
-                <a href="/buku" class="btn btn-primary">Form Buku</a>
+                <a href="/buku/create" class="btn btn-primary">Form Buku</a>
               </div>
             </div>
 
@@ -33,7 +33,7 @@
                 <h6 class="card-title">Silahkan isi Form Petugas ini</h6>
 
                 <p class="card-text">Isi dengan data asli  Anda.</p>
-                <a href="/petugas" class="btn btn-primary">Form Petugas</a>
+                <a href="/petugas/create" class="btn btn-primary">Form Petugas</a>
               </div>
             </div>
 

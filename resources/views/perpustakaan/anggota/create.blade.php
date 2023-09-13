@@ -8,34 +8,31 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="{{ route('anggota.store') }}" method="POST">
+                @csrf 
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="idAnggota">ID Anggota :</label>
-                        <input type="text" class="form-control" id="idAnggota" placeholder="Masukkan ID">
-                    </div>
-                    <div class="form-group">
                         <label for="kodeAnggota">Kode Anggota :</label>
-                        <input type="text" class="form-control" id="kodeAnggota" placeholder="Masukkan Kode">
+                        <input type="text" class="form-control" name="kode_anggota" id="kodeAnggota" placeholder="Masukkan Kode">
                     </div>
                     <div class="form-group">
                         <label for="namaAnggota">Nama Anggota :</label>
-                        <input type="text" class="form-control" id="namaAnggota" placeholder="Masukkan Nama">
+                        <input type="text" class="form-control" name="nama_anggota" id="namaAnggota" placeholder="Masukkan Nama">
                     </div>
                     <div class="form-group">
                         <label for="namaAnggota">Jenis Kelamin Anggota :</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="laki-laki">
+                                <input class="form-check-input" type="radio" name="jk_anggota" value="L">
                                 <label class="form-check-label">L</label>
                             </div>
                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="perempuan">
+                            <input class="form-check-input" type="radio" name="jk_anggota" value="P">
                             <label class="form-check-label">P</label>
                             </div>
                     </div>
                     <div class="form-group">
                         <label>Jurusan Anggota :</label>
-                        <select class="custom-select">
+                        <select class="custom-select" name="jurusan_anggota" id="jurusanAnggota">
                         <option value="">Pilih Jurusan</option>
                         <option value="RPL">Rekayasa Perangkat Lunak</option>
                         <option value="TP">Teknik Pemesinan</option>
@@ -47,11 +44,11 @@
                     </div>
                     <div class="form-group">
                         <label for="noTelp">No. Telepon Anggota :</label>
-                        <input type="text" class="form-control" id="noTelp" placeholder="Masukkan No. Telepon">
+                        <input type="text" class="form-control" name="no_telp_anggota" id="noTelp" placeholder="Masukkan No. Telepon">
                     </div>
                     <div class="form-group">
                         <label>Alamat Anggota :</label>
-                        <textarea class="form-control" rows="3" placeholder="Masukkan Alamat"></textarea>
+                        <textarea class="form-control" name="alamat_anggota" id="alamatAnggota" rows="3" placeholder="Masukkan Alamat"></textarea>
                     </div>  
                 </div>
                 <!-- /.card-body -->
