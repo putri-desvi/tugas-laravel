@@ -32,7 +32,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data Table Buku</h3>
+                <h3 class="card-title">Data Table Rak</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -40,26 +40,18 @@
                   <thead>
                   <tr>
                     <th>No</th>
-                    <th>Kode Buku</th>
-                    <th>Judul Buku</th>
-                    <th>Penulis Buku</th>
-                    <th>Penerbit Buku</th>
-                    <th>Tahun Penerbit</th>
-                    <th>Stok</th>
-                    <th>ID Rak</th>
-                    <th width="200">Action</th>
+                    <th>Nama Rak</th>
+                    <th>Lokasi Rak</th>
+                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                    @forelse ($bukus as $key => $value)
+                    @forelse ($raks as $key => $value)
                         <tr>
                             <td>{{ $key +1 }}</td>
-                            <td>{{ $value->kode_buku }}</td>
-                            <td>{{ $value->judul_buku }}</td>
-                            <td>{{ $value->penulis_buku }}</td>
-                            <td>{{ $value->penerbit_buku }}</td>
-                            <td>{{ $value->tahun_penerbit }}</td>                            
-                            <td>{{ $value->stok }}</td>
+                            <td>{{ $value->nama_rak }}</td>
+                            <td>{{ $value->lokasi_rak }}</td>
+                            <td>
                                 <a href="" class="btn-sm btn-info">Show</a>
                                 <a href="" class="btn-sm btn-warning">Edit</a>
                                 <a href="" class="btn-sm btn-danger">Delete</a>

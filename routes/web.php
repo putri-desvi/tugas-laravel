@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\PetugasController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\RakController;
 
 
 /*
@@ -26,6 +27,9 @@ Route::resource('anggota', AnggotaController::class);
 Route::resource('petugas', PetugasController::class);
 
 Route::resource('buku', BukuController::class);
+
+Route::resource('rak', RakController::class);
+
 
 /*Route::get('/about', function () {
     return view('layouts.master');

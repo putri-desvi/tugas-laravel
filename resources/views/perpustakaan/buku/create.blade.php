@@ -31,10 +31,6 @@
                                 <label for="tahunTerbit">Tahun Terbit :</label>
                                 <input type="text" class="form-control" name="tahun_penerbit" id="tahunTerbit" placeholder="Masukkan Tahun Terbit">
                             </div>
-                            <div class="form-group">
-                                <label for="rakId">ID Rak :</label>
-                                <input type="id" class="form-control" name="tahun_penerbit" id="tahunTerbit" placeholder="Masukkan Tahun Terbit">
-                            </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
                             <button type="submit" class="btn btn-primary">Submit</button>

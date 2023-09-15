@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class BukuController extends Controller
+class RakController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class BukuController extends Controller
     public function index()
     {
         //
-        $bukus = DB::table('bukus')->get();
-        return view('perpustakaan.buku.index', compact('bukus'));
+        $raks = DB::table('raks')->get();
+        return view('perpustakaan.rak.index', compact('raks'));
     }
 
     /**
@@ -23,7 +23,7 @@ class BukuController extends Controller
     public function create()
     {
         //
-        return view('perpustakaan.buku.create');
+        return view('perpustakaan.rak.create');
     }
 
     /**
@@ -33,25 +33,16 @@ class BukuController extends Controller
     {
         //
         $request->validate([
-            'kode_buku' => 'required',
-            'judul_buku' => 'required',
-            'penulis_buku' => 'required',
-            'penerbit_buku' => 'required',
-            'tahun_penerbit' => 'required',
-            'stok' => 'required',
+            'nama_rak' => 'required',
+            'lokasi_rak' => 'required',
         ]);
 
-        $query = DB::table('bukus')->insert([
-            'kode_buku' => $request['kode_buku'],
-            'judul_buku' => $request['judul_buku'],
-            'penulis_buku' => $request['penulis_buku'],
-            'penerbit_buku' => $request['penerbit_buku'],
-            'tahun_penerbit' => $request['tahun_penerbit'],
-            'stok' => $request['stok'],
-            'rak_id' => $rak_id,
+        $query = DB::table('raks')->insert([
+            'nama_rak' => $request['nama_rak'],
+            'lokasi_rak' => $request['lokasi_rak'],
         ]);
 
-        return redirect('/buku');
+        return redirect('/rak');
     }
 
     /**

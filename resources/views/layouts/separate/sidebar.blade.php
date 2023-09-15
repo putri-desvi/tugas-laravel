@@ -13,7 +13,7 @@
           <img src="template/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Grisella Naomi A</a>
+          <a href="#" class="d-block">Putri Desvi C</a>
         </div>
       </div>
 
