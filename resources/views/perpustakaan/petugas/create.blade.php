@@ -1,5 +1,4 @@
-        @extends('layouts.master')
-
+@extends('layouts.master')
         @section('content')
             <!--ISI-->
             <div class="card card-primary">
@@ -37,6 +36,7 @@
                     <!-- /.card-body -->
                     <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="{{ route('petugas.index') }}" class="btn btn-danger float-right"><i class="fas fa-close"></i>Back</a>
                     </div>
                 </form>
             </div>

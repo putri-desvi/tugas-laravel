@@ -1,5 +1,4 @@
-        @extends('layouts.master')
-
+@extends('layouts.master')
         @section('content')
             <!--ISI-->
             <div class="card card-primary">
@@ -21,6 +20,7 @@
                     </div>
                     <div class="form-group">
                         <label for="namaAnggota">Jenis Kelamin Anggota :</label>
+                        <label for="jkAnggota">Jenis Kelamin Anggota :</label>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="jk_anggota" value="L">
                                 <label class="form-check-label">L</label>
@@ -54,6 +54,7 @@
                 <!-- /.card-body -->
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="{{ route('anggota.index') }}" class="btn btn-danger float-right"><i class="fas fa-close"></i>Back</a>
                 </div>
               </form>
             </div>

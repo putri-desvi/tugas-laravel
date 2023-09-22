@@ -1,12 +1,10 @@
 @extends('layouts.master')
-
 @push('css')
   <!-- DataTables -->
   <link rel="stylesheet" href="{{ asset('/template/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
   <link rel="stylesheet" href="{{ asset('/template/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
   <link rel="stylesheet" href="{{ asset('/template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
 @endpush
-
 @section('content')
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -24,7 +22,6 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -36,6 +33,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
+                <a href="{{ route('anggota.create') }}" class="btn btn-success btn-sm mb-2 float-right"><i class="fas fa-plus"></i> Tambah</a>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
@@ -46,6 +44,7 @@
                     <th>Jurusan Anggota</th>
                     <th>No Telpon </th>
                     <th width="300px">Alamat Anggota</th>
+                    <th width="250px">Alamat Anggota</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -60,9 +59,12 @@
                             <td>{{ $value->no_telp_anggota }}</td>                            
                             <td>{{ $value->alamat_anggota }}</td>
                             <td>
-                                <a href="" class="btn-sm btn-info">Show</a>
-                                <a href="" class="btn-sm btn-warning">Edit</a>
-                                <a href="" class="btn-sm btn-danger">Delete</a>
+                                  @csrf 
+                                  @method('DELETE')
+                                <a href="{{ route('anggota.show', $value->id) }}" class="btn-sm btn-info">Show</a>
+                                <a href="{{ route('anggota.edit', $value->id) }}" class="btn-sm btn-warning">Edit</a>
+                                <button type="submit" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#hapusData">Delete
+                                </form>
                             </td>
                         </tr>
                     @empty
@@ -72,6 +74,25 @@
                     @endforelse
                   </tbody>
                 </table>
+
+                <!-- Modal -->
+                <div class="modal" id="hapusData">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="hapusData">Menghapus Data</h5>
+                      </div>
+                      <div class="modal-body">
+                        Anda yakin ingin menghapus data ini?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary">Back</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="row">
                       <div class="col-sm-12 col-md-7 pt-4">
                         <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
@@ -119,9 +140,7 @@
     <!-- /.content -->
     
    
-
 @endsection
-
 @push('script')
 <script src="{{ asset('/template/plugins/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('/template/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
@@ -135,7 +154,6 @@
 <script src="{{ asset('/template/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
 <script src="{{ asset('/template/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
 <script src="{{ asset('/template/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
-
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -153,5 +171,4 @@
     });
   });
 </script>
-
 @endpush
